@@ -1,0 +1,55 @@
+<div class="container" style="text-align: center;" ><h2> Liste des equipements</h2> </div>
+
+
+
+<button mat-icon-button  routerLink="/addequip" class="ajouter"  #tooltip="matTooltip"
+matTooltip="Ajouter un equipement"
+matTooltipPosition="above"
+matTooltipHideDelay="100">
+    <mat-icon>add</mat-icon>
+  </button>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col"> Nom Type Eqt</th>
+            <th scope="col"> Nom</th>
+            <th scope="col"> categorie</th>
+            <th scope="col"> Nombre de slot</th>
+            <th scope="col"> Debit max</th>
+            
+           <th scope="col"> Num de slot min</th>
+           <th scope="col"> Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let equip of equipements">
+        <td>{{equip.nomSupEquip}}</td>
+        <td>{{equip.nomEquip}}</td>
+        <td>{{equip.categorieEquip}}</td>
+        <td>{{equip.numbSlot}}</td>
+        <td>{{equip.debitMax}}</td>
+        <td>{{equip.numeroSlotMin}}</td>
+        <td>
+            
+            <button mat-icon-button  (click)= "updateEquipement(equip.id)" aria-label="Example icon button with a home icon">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button  (click)="deleteEquipement(equip.id)" aria-label="Example icon button with a home icon">
+                <mat-icon>delete</mat-icon>
+              </button>
+              
+            
+            <button  class="btn btn-info" (click)="afficherDetails(equip.id)"  >Afficher</button>&nbsp;&nbsp;&nbsp;
+            <button  class="btn btn-danger" (click)="ConfigurerSlot(equip.id)"  >Configurer numbSlot</button>
+            <button  class="btn btn-danger" (click)="ajouterCarte(equip.id)"  >Ajouter Carte</button>
+        </td>
+        </tr>
+        
+        
+    
+    </tbody>
+    </table>
+
+    <router-outlet></router-outlet>
+    

@@ -1,0 +1,41 @@
+<div class="container" style="text-align: center;" ><h2> Liste des Clients </h2> </div>
+
+<a  routerLink="/addclient" class="btn btn-primary" style="margin-top: 1cm ; margin-bottom: 1cm;">Ajouter un client</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col"> Nom Client</th>
+            <th scope="col"> Reference </th>
+            
+            <th scope="col"> Action</th>
+            
+            
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let client of client">
+        <td>{{client.nomClient}}</td>
+        <td>{{client.reference}}</td>
+        
+        
+        
+        
+        
+        <td>
+            <button mat-icon-button  (click)="deleteClient(client.id)" aria-label="Example icon button with a home icon">
+                <mat-icon>delete</mat-icon>
+              </button>
+
+              <button  class="btn btn-info" (click)="ajouterService(client.id)"  >ajouter Service</button>
+        </td>
+        </tr>
+        
+        
+    
+    </tbody>
+    </table>
+
+    <router-outlet></router-outlet>
+    

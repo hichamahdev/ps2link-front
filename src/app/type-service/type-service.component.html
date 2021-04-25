@@ -1,0 +1,41 @@
+<div class="container" style="text-align: center;" ><h2> Liste des Clients </h2> </div>
+
+<a  routerLink="/addservice" class="btn btn-primary" style="margin-top: 1cm ; margin-bottom: 1cm;">Ajouter un service</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col"> refference</th>
+            <th scope="col"> Nom Service </th>
+            <th scope="col"> Type Service </th>
+            
+            <th scope="col"> Action</th>
+            
+            
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let service of service">
+        <td>{{service.reference}}</td>
+        <td>{{service.nomService}}</td>
+        <td>{{service.typeService}}</td>
+        
+        
+        
+        
+        
+        <td>
+            <button mat-icon-button  (click)="deleteService(service.id)" aria-label="Example icon button with a home icon">
+                <mat-icon>delete</mat-icon>
+              </button>
+        </td>
+        </tr>
+        
+        
+    
+    </tbody>
+    </table>
+
+    <router-outlet></router-outlet>
+    

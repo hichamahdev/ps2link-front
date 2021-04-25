@@ -1,0 +1,42 @@
+<div class="container" style="text-align: center;" ><h2> Liste des Cartes</h2> </div>
+
+<a  routerLink="/addcarte" class="btn btn-primary" style="margin-top: 1cm ; margin-bottom: 1cm;">Ajouter une carte</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col"> Nom Carte</th>
+            <th scope="col"> Type</th>
+            <th scope="col"> Listes des Port</th>
+            <th scope="col"> Action</th>
+            
+            
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let cart of carte">
+        <td>{{cart.nomCarte}}</td>
+        <td>{{cart.typeCarte}}</td>
+        
+        <td> <ul *ngFor="let port of cart.port">
+            <li >
+              {{port.nomPort | json}}      
+            </li>
+          </ul>`</td>
+        
+        
+        
+        <td>
+          <button  class="btn btn-info" (click)="updateCarte(cart.id)"  >modifier la  la carte</button>
+          <button  class="btn btn-info" (click)="afficheCarte(cart.id)"  >affiche carte</button>
+        </td>
+        </tr>
+        
+        
+    
+    </tbody>
+    </table>
+
+    <router-outlet></router-outlet>
+    

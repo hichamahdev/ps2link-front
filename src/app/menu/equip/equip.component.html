@@ -1,0 +1,72 @@
+<div class="container" style="text-align: center;" ><h2> Catalogue</h2> </div>
+
+<a  routerLink="/addregion" class="btn btn-primary" style="margin-top: 1cm ; margin-bottom: 1cm;">Ajouter un region</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col"> Nom Region</th>
+            
+            <th scope="col"> Action</th>
+            
+            
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let region of regions">
+        <td>{{region.nom}}</td>
+    
+        
+        <td>
+          <button  class="btn btn-info" (click)="detail(region.id)">detail</button>&nbsp;&nbsp;&nbsp;
+          <button  class="btn btn-danger" (click)="deleteRegion(region.id)"  >Supprimer</button>&nbsp;&nbsp;&nbsp;
+          <button  class="btn btn-info" (click)="ajouterSite(region.id)"  >ajouter site region</button>
+        </td>
+        </tr>
+        
+        
+    
+    </tbody>
+    </table>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <a  routerLink="/addsite" class="btn btn-primary" style="margin-top: 1cm ; margin-bottom: 1cm;">Ajouter un site</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col"> Nom Site</th>
+            
+            <th scope="col"> Action</th>
+            
+            
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let site of sites">
+        <td>{{site.nom}}</td>
+    
+        
+        <td>
+          <button  class="btn btn-info" (click)="detailSite(site.id)">detail</button>&nbsp;&nbsp;&nbsp;
+          <button  class="btn btn-danger" (click)="deleteSite(site.id)"  >Supprimer</button>&nbsp;&nbsp;&nbsp;
+          <button  class="btn btn-info" (click)="ajouterequip(site.id)"  >ajouter Equipement site </button>
+          
+        </td>
+        </tr>
+        
+        
+    
+    </tbody>
+    </table>
+
+    
+
+    <router-outlet></router-outlet>
+    

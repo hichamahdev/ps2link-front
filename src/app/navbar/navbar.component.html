@@ -1,0 +1,83 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a routerLink="/" class="navbar-brand" >PS2LINK</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li ngbDropdown class="nav-item dropdown">
+            <a  *ngIf="authority === 'admin'" class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false" ngbDropdownToggle>Gestion</a>
+            <ul ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
+              <li><a class="dropdown-item" routerLink="recherchelien">Recherche dans les liens  dans une autre BD</a></li>
+              <li><a class="dropdown-item" routerLink="equi">Equipements</a></li>
+              <li><a class="dropdown-item" routerLink="typeclient">Clients</a></li>
+              <li><a class="dropdown-item" routerLink="typeservice">Services</a></li>
+              <li><a class="dropdown-item" href="#">Ref.lien/circuits</a></li>
+              <li><a class="dropdown-item" href="#">Inventaire CLs</a></li>
+            </ul>
+          </li>
+          <li ngbDropdown class="nav-item dropdown">
+            <a *ngIf="authority === 'admin'"  class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false" ngbDropdownToggle>Gest d'allocat/gel des res</a>
+            <ul ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
+            
+              <li><a class="dropdown-item" href="#"> Allouer ressource</a></li>
+              <li><a class="dropdown-item" href="#">geler ressource</a></li>
+              
+            </ul>
+          </li>
+          <li ngbDropdown class="nav-item dropdown">
+            <a *ngIf="authority === 'admin'"  class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false" ngbDropdownToggle>Rapport</a>
+            <ul ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
+              <li><a class="dropdown-item" routerLink="tyepeequip">Recherche des Equipements</a></li>
+              <li><a class="dropdown-item" href="#">Recherche des reference lien/equipement</a></li>
+              <li><a class="dropdown-item" href="#">affectation des ressource/element</a></li>
+            </ul>
+          </li>
+          <li ngbDropdown class="nav-item dropdown">
+            <a *ngIf="authority === 'admin'"  class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false" ngbDropdownToggle>Administration</a>
+            <ul ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
+              <li><a class="dropdown-item" routerLink="tyepeequip">Type Equipements</a></li>
+              <li><a class="dropdown-item" routerLink="typeportequip">Type Port Equipement</a></li>
+              <li><a class="dropdown-item" routerLink="typecarte">Type Carte </a></li>
+              <li><a class="dropdown-item" routerLink="typeport">Type  Port Carte</a></li>
+              <li><a class="dropdown-item" href="#">Type Service</a></li>
+              <li><a class="dropdown-item" href="#">Relation type Equip-type Carte</a></li>
+              <li><a class="dropdown-item" routerLink="typeconection">Type de Connection</a></li>
+              <li><a class="dropdown-item" routerLink="ressource">gestion ressource</a></li>
+              <li><a class="dropdown-item" href="#">Attributs</a></li>
+              <li><a class="dropdown-item" href="#">Construire chemin/HO trai</a></li>
+            </ul>
+          </li>
+          <li ngbDropdown class="nav-item dropdown">
+            <a *ngIf="authority === 'admin'"  class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false" ngbDropdownToggle> ? </a>
+            <ul ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
+              <li><a class="dropdown-item" href="#">Aide en ligne</a></li>
+              <li><a class="dropdown-item" href="#">Manuel utilisateur</a></li>
+              <li><a class="dropdown-item" href="#">A propos de ..</a></li>
+            </ul>
+          </li>
+          <ul class="nav navbar-nav" routerLinkActive="active">
+            <li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
+            <li *ngIf="authority === 'user'" class="nav-item">
+              <a class="nav-link" routerLink="user">User Board</a>
+            </li>
+            <li *ngIf="authority === 'admin'" class="nav-item">
+              <a class="nav-link" routerLink="admin">Admin Board</a>
+            </li>
+            <li *ngIf="authority === 'pm'" class="nav-item">
+              <a class="nav-link" routerLink="pm">PM Board</a>
+            </li>
+            <li *ngIf="!authority" class="nav-item">
+              <a class="nav-link" routerLink="/auth/login">Login</a>
+            </li>
+          </ul>
+        </ul>
+        
+        
+      </div>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+
