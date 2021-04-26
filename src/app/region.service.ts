@@ -9,7 +9,7 @@ import { Region } from './region';
 })
 export class RegionService {
 
-  private baseURL = "http://localhost:8081/api/auth/region";
+  private baseURL = "https://ps2linkproject.herokuapp.com/api/auth/region";
 
   constructor(private httpclient:HttpClient) { }
 

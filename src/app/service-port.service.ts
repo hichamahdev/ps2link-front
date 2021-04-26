@@ -8,7 +8,7 @@ import { Port } from './port';
 })
 export class ServicePortService {
 
-  private baseUrl= "http://localhost:8081/api/v1/port";
+  private baseUrl= "https://ps2linkproject.herokuapp.com/api/v1/port";
   constructor(private httpclient:HttpClient) { }
 
   getPortsList(): Observable<Port[]> {

@@ -7,7 +7,7 @@ import { Slot } from './slot';
   providedIn: 'root'
 })
 export class SlotService {
-  private baseURL = "http://localhost:8081/api/auth/slot";
+  private baseURL = "https://ps2linkproject.herokuapp.com/api/auth/slot";
 
 
   constructor(private httpclient:HttpClient) { }

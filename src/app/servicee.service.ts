@@ -9,7 +9,7 @@ import { Servicee } from './servicee';
 })
 export class ServiceeService {
 
-  private baseURL = "http://localhost:8081/api/auth/service";
+  private baseURL = "https://ps2linkproject.herokuapp.com/api/auth/service";
 
   constructor(private httpclient:HttpClient) { }
 

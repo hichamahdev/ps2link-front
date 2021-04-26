@@ -7,7 +7,7 @@ import { Clientt } from './clientt';
   providedIn: 'root'
 })
 export class ClientService {
-  private baseURL = "http://localhost:8081/api/auth/client";
+  private baseURL = "https://ps2linkproject.herokuapp.com/api/auth/client";
 
   constructor(private httpclient:HttpClient) { }
 

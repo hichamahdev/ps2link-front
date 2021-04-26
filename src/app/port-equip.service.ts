@@ -10,7 +10,7 @@ export class PortEquipService {
 
   
 
-  private baseUrl= "http://localhost:8081/api/v1/portequip";
+  private baseUrl= "https://ps2linkproject.herokuapp.com/api/v1/portequip";
 
   constructor(private httpclient:HttpClient) { }
 

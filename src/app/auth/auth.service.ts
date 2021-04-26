@@ -17,8 +17,8 @@ const httpOptions = {
 })
 export class AuthService {
 
-  private loginUrl = 'http://localhost:8081/api/auth/signin';
-  private signupUrl = 'http://localhost:8081/api/auth/signup';
+  private loginUrl = 'https://ps2linkproject.herokuapp.com/api/auth/signin';
+  private signupUrl = 'https://ps2linkproject.herokuapp.com/api/auth/signup';
 
   constructor(private http: HttpClient) {
   }

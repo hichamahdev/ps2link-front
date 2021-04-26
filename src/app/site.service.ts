@@ -8,8 +8,8 @@ import { Site } from './site';
 })
 export class SiteService {
 
-  private baseURL = "http://localhost:8081/api/auth/site";
-  private baseURLs = "http://localhost:8081/api/auth/site/region";
+  private baseURL = "https://ps2linkproject.herokuapp.com/api/auth/site";
+  private baseURLs = "https://ps2linkproject.herokuapp.com/api/auth/site/region";
 
   constructor(private httpclient:HttpClient) { }
 

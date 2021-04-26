@@ -8,8 +8,8 @@ import { Equipement } from './equipement';
   providedIn: 'root'
 })
 export class EquipementService {
-  private baseURL = "http://localhost:8081/api/auth/equipements";
-  private baseURLs = "http://localhost:8081/api/auth/equipements/site";
+  private baseURL = "https://ps2linkproject.herokuapp.com/api/auth/equipements";
+  private baseURLs = "https://ps2linkproject.herokuapp.com/api/auth/equipements/site";
 
   constructor(private httpclient:HttpClient) { }
 

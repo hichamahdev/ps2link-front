@@ -8,8 +8,8 @@ import { Carte } from './carte';
 })
 export class CarteService {
 
-  private baseURL = "http://localhost:8081/api/auth/carte";
-  private baseURLs = "http://localhost:8081/api/auth/carte/slot";
+  private baseURL = "https://ps2linkproject.herokuapp.com/api/auth/carte";
+  private baseURLs = "https://ps2linkproject.herokuapp.com/api/auth/carte/slot";
 
   constructor(private httpclient:HttpClient) { }
 
