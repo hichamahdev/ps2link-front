@@ -7,9 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  private userUrl = 'http://localhost:8081/api/test/user';
-  private pmUrl = 'http://localhost:8081/api/test/pm';
-  private adminUrl = 'http://localhost:8081/api/test/admin';
+  private userUrl = 'https://ps2linkproject.herokuapp.com/api/test/user';
+  private pmUrl = 'https://ps2linkproject.herokuapp.com/api/test/pm';
+  private adminUrl = 'https://ps2linkproject.herokuapp.com/api/test/admin';
 
   constructor(private http: HttpClient) { }
 
